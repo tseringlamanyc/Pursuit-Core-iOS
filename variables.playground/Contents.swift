@@ -1,7 +1,19 @@
 import UIKit
 
+// mutable
 var str = "Hello, playground"
-// - comment
+str = "hello,sun"
+print(str)
+
+// - single line comment
+/* multiline comment
+ Swift introduced in 2014
+ - Type safe language meaning you cant mix a declared data type with another
+   var name = "alex" ,,, you cannot update name = 10
+   type string is not an Int
+ - Modern language
+ - Provides optionals that allows us to know whether a variable has a value or not
+ */
 
 
 // data types: String, Int (Integer)
@@ -19,6 +31,15 @@ var name = "Tsering"
 // type annotation: explicity writing the data type using :(colon)
 var cohort: String = "iOS 6.3"
 
+let previousName = "alex"
+let newName = "Alex"
+
+// case sensitive ,,,, comaparing strings
+let stringResult = previousName == newName
+
+let alphabetOrder = "Kelby" < "Lorraine"
+print("alphabeticalOrder result \(alphabetOrder)")
+
 // =======================================
 //          character
 // =======================================
@@ -31,7 +52,7 @@ var alphabet: Character = "c"
 cohort = "iOS 7.0"
 
 // =======================================
-//            Int
+//                  Int
 // =======================================
 
 // declared varibale age and initialized value to 32
@@ -46,7 +67,7 @@ futureAge
 print("Age 8 years from now is \(futureAge)")
 
 // =======================================
-//             double
+//                 double
 // =======================================
 // holds floating numbers (ex 50.5), decimal numbers
 
@@ -60,6 +81,25 @@ print(balance)
 // short hand
 balance -= 200
 print(balance)
+
+// =======================================
+//           Double vs Floating
+// =======================================
+
+/*
+ Float holds 32 bit
+ Double holds 64 bit
+ */
+let floatNum: Float = 67.997755566677
+let doubleNum = 67.997755566677
+print ("float is \(floatNum) and double is \(doubleNum)")
+
+//let accountBalance = floatNum + doubleNum    this doesnt compile cant add float and double
+
+// here we are casting or converting a Float to a Double
+let accountBalance = Double(floatNum) + doubleNum
+print("account balance is now \(accountBalance)")
+
 
 // =========================================================
 //              boolean - Bool, comparison operators
@@ -90,6 +130,10 @@ print (otherResult)
 //salary *= 2
 //print (salary)
 
+// integer division or multipication truncates the decimals
+let integerDivision = 16/3
+print("integer division is \(integerDivision)")
+
 var salary = 20_000
 salary *= 2
 print(salary)
@@ -97,6 +141,14 @@ print(salary)
 var myTime = 200
 myTime /= 2
 print(myTime)
+
+//floating points keeps decimals
+let floatingDivision = 16.0 / 3.0
+print ("floating division is \(floatingDivision)")
+
+// dividing by 0
+// 89 / 0 - does not compile
+
 
 // =========================================
 //       Modulo operator or Remainder
@@ -113,4 +165,11 @@ print(even)
 //              Constants
 // =========================================
 
-let pi = 3.14 
+let pi = 3.14
+
+// concatenation : adding together
+let fullName = "Tsering" + " Lama"
+
+print("Persons full name is \(fullName)")
+
+
